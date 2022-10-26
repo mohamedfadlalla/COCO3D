@@ -12,8 +12,8 @@ import db
 import time
 
 
-DB_NAME = 'coco.sqlite'
-batch = 'df/df1.csv'
+DB_NAME = '/content/gdrive/MyDrive/df1.sqlite'
+batch = '/content/COCO3D/df/df1.csv'
 
 RESUME = False
 
@@ -26,7 +26,7 @@ else:
 
 
 
-for i in range(5):
+while True:
 	try:
 		cur.execute('SELECT coconut_id, unique_smiles FROM NP WHERE CID is 0  ORDER BY RANDOM() LIMIT 1')
 		row = cur.fetchone()
